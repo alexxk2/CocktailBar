@@ -2,10 +2,18 @@
 <resources>
 
 
-    <style name="AddNewCocktailFab" parent="Widget.MaterialComponents.FloatingActionButton">
+    <style name="AddNewCocktailFab" parent="Widget.MaterialComponents.FloatingActionButton" />
 
-    </style>
-    <style name="CardView." parent="Widget.Material3.CardView.Filled">
+    <style name="AddPictureButtonStyle" parent="Widget.Material3.Button.IconButton.Filled" />
 
+    <style name="CustomOutlinedButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="boxStrokeColor">@color/dark_grey</item>
     </style>
+
+
+    <style name="SaveButton" parent="@style/Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/blue</item>
+    </style>
+
+
 </resources>

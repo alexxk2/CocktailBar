@@ -12,5 +12,5 @@ data class CocktailDto(
     val name: String,
     val description: String,
     val recipe: String,
-    val ingredients: List<String>
+    val ingredients: String
 )

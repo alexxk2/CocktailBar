@@ -14,5 +14,17 @@
     <string name="cocktail_image">cocktail image</string>
     <string name="error_image">error image</string>
     <string name="something_went_wrong">Something went wrong</string>
+    <string name="add_title">Add title</string>
+    <string name="add_ingredients">Add ingredients</string>
+
+
+    <!--Creating screen-->
+    <string name="add_picture">Add picture</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="recipe">Recipe</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="ingredients">Ingredients</string>
 
 </resources>
