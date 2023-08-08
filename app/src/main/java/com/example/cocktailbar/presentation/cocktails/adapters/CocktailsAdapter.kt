@@ -16,10 +16,8 @@ class CocktailsAdapter(
     private val actionListener: CocktailActionListener
 ) : ListAdapter<Cocktail, CocktailsAdapter.CocktailViewHolder>(DiffCallBack), View.OnClickListener {
 
-
     class CocktailViewHolder(val binding: CocktailItemBinding) :
         RecyclerView.ViewHolder(binding.root)
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CocktailViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -39,7 +37,6 @@ class CocktailsAdapter(
             root.tag = item
             cocktailCard.tag = item
         }
-
     }
 
     override fun onClick(v: View?) {
@@ -60,11 +57,11 @@ class CocktailsAdapter(
             override fun areItemsTheSame(oldItem: Cocktail, newItem: Cocktail): Boolean {
                 return oldItem === newItem
             }
+
             override fun areContentsTheSame(oldItem: Cocktail, newItem: Cocktail): Boolean {
                 return oldItem == newItem
             }
         }
     }
-
 
 }

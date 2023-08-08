@@ -42,7 +42,6 @@ class DetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         bindViews()
 
         binding.buttonEdit.setOnClickListener {
@@ -65,7 +64,9 @@ class DetailsFragment : Fragment() {
             cocktailTitle.text = cocktail.name
             cocktailDescription.text = cocktail.description
             cocktailIngredients.text = cocktail.ingredients
-            cocktailRecipe.text = getString(R.string.recipe_string, cocktail.recipe)
+            if (cocktail.recipe.isNotBlank()) {
+                cocktailRecipe.text = getString(R.string.recipe_string, cocktail.recipe)
+            }
         }
     }
 

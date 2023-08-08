@@ -1,8 +1,7 @@
 package com.example.cocktailbar.presentation.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.WindowManager
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -27,4 +26,6 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
+
+
 }

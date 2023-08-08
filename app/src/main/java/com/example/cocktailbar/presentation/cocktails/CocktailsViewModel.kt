@@ -11,8 +11,8 @@ import com.example.cocktailbar.presentation.cocktails.models.ScreenState
 import kotlinx.coroutines.launch
 
 class CocktailsViewModel(
-    private val getAllCocktailsUseCase: GetAllCocktailsUseCase,
-    private val addNewCocktailUseCase: AddNewCocktailUseCase
+    private val getAllCocktailsUseCase: GetAllCocktailsUseCase
+
 ) : ViewModel() {
 
     private val _screenState = MutableLiveData<ScreenState>()
@@ -22,19 +22,8 @@ class CocktailsViewModel(
     val cocktailsList: LiveData<List<Cocktail>> = _cocktailsList
 
 
-    init {
-        _screenState.value = ScreenState.Loading
-        viewModelScope.launch {
-
-
-        }
-
-    }
-
     fun getAllCocktails() {
-
         _screenState.value = ScreenState.Loading
-
         viewModelScope.launch {
 
             try {

@@ -34,7 +34,7 @@
             android:fontFamily="@font/didact_gothic_regular"
             android:text="@string/my_cocktails"
             android:textAlignment="center"
-            android:textSize="36sp" />
+            android:textSize="@dimen/title_text_size" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
             android:lines="2"
             android:text="@string/add_your_first_cocktail"
             android:textAlignment="center"
-            android:textSize="16sp" />
+            android:textSize="@dimen/body_text_size" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -78,7 +78,7 @@
             android:gravity="center"
             android:text="@string/my_cocktails"
             android:textAlignment="center"
-            android:textSize="36sp" />
+            android:textSize="@dimen/title_text_size" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
@@ -127,7 +127,7 @@
             android:fontFamily="@font/didact_gothic_regular"
             android:text="@string/something_went_wrong"
             android:textAlignment="center"
-            android:textSize="22sp" />
+            android:textSize="@dimen/error_message_text_size" />
 
     </LinearLayout>
 
@@ -136,13 +136,12 @@
         android:id="@+id/fab_add"
         style="@style/Widget.MaterialComponents.FloatingActionButton"
         android:layout_width="wrap_content"
-
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/blue"
         android:contentDescription="@string/add_button"
         android:src="@drawable/ic_add"
-        app:fabCustomSize="80dp"
+        app:fabCustomSize="@dimen/add_fab_custom_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

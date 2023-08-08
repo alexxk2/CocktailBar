@@ -16,10 +16,8 @@ class CreationViewModel(
     private val getCocktailUseCase: GetCocktailUseCase
 ) : ViewModel() {
 
-
     private val _cocktail = MutableLiveData<Cocktail>()
     val cocktail: LiveData<Cocktail> = _cocktail
-
 
     private fun insertNewCocktail(cocktail: Cocktail) {
         viewModelScope.launch {
@@ -50,18 +48,17 @@ class CreationViewModel(
     ) = (name.isNotBlank() && ingredients.isNotBlank())
 
 
-    fun getCocktail(id: Int){
+    fun getCocktail(id: Int) {
         viewModelScope.launch {
             _cocktail.value = getCocktailUseCase.execute(id)
         }
     }
 
-    private fun updateCocktail(cocktail: Cocktail){
+    private fun updateCocktail(cocktail: Cocktail) {
         viewModelScope.launch {
             editCocktailUseCase.execute(cocktail)
         }
     }
-
 
     fun editCocktail(
         id: Int,
@@ -69,7 +66,7 @@ class CreationViewModel(
         description: String,
         ingredients: String,
         recipe: String
-    ){
+    ) {
         val editedCocktail = Cocktail(
             id = id,
             name = name,
@@ -78,7 +75,6 @@ class CreationViewModel(
             imageSrc = 0,
             recipe = recipe
         )
-
         updateCocktail(editedCocktail)
     }
 

@@ -29,65 +29,45 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:paddingHorizontal="16dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
 
             <TextView
                 android:id="@+id/cocktail_title"
                 android:layout_width="match_parent"
-                android:layout_marginHorizontal="52dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="52dp"
                 android:layout_marginTop="28dp"
-                android:lines="1"
                 android:ellipsize="end"
                 android:fontFamily="@font/didact_gothic_regular"
                 android:gravity="center"
+                android:lines="1"
                 android:text="@string/default_text"
                 android:textAlignment="center"
-                android:textSize="36sp" />
+                android:textSize="@dimen/title_text_size" />
 
             <TextView
                 android:id="@+id/cocktail_description"
+                style="@style/DetailsBodyText"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/didact_gothic_regular"
-                android:gravity="center"
-                android:text="@string/default_text"
-                android:textAlignment="center"
-                android:textSize="16sp" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/cocktail_ingredients"
+                style="@style/DetailsBodyText"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/didact_gothic_regular"
-                android:gravity="center"
-                android:text="@string/default_text"
-                android:textAlignment="center"
-                android:textSize="16sp" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/cocktail_recipe"
+                style="@style/DetailsBodyText"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/didact_gothic_regular"
-                android:gravity="center"
-                android:text="@string/default_text"
-                android:textAlignment="center"
-                android:textSize="16sp" />
-
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
-
 
     </androidx.core.widget.NestedScrollView>
 
@@ -95,33 +75,33 @@
         android:id="@+id/button_edit"
         style="@style/Widget.Material3.Button.IconButton.Filled"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="@dimen/long_buttons_height"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/small_button_shape"
         android:contentDescription="@string/add_picture"
         android:fontFamily="@font/didact_gothic_regular"
         android:gravity="center"
         android:text="@string/edit"
         android:textSize="24sp"
-        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@id/button_delete"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/button_delete"
         style="@style/SaveButton"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="@dimen/long_buttons_height"
         android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="24dp"
         android:contentDescription="@string/add_picture"
         android:fontFamily="@font/didact_gothic_regular"
         android:text="@string/delete"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

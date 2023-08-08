@@ -21,7 +21,7 @@ interface CocktailsDao {
     @Delete
     suspend fun deleteItem(cocktailDto: CocktailDto)
 
-    @Query("SELECT * FROM cocktails ORDER BY name ASC")
+    @Query("SELECT * FROM cocktails ORDER BY id ASC")
     suspend fun getAllCocktails(): List<CocktailDto>
 
     @Query("SELECT * FROM cocktails WHERE id =:id")

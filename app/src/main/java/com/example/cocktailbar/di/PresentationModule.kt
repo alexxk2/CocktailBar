@@ -10,8 +10,7 @@ val presentationModule = module {
 
     viewModel<CocktailsViewModel> {
         CocktailsViewModel(
-            getAllCocktailsUseCase = get(),
-            addNewCocktailUseCase = get()
+            getAllCocktailsUseCase = get()
         )
     }
 

@@ -141,7 +141,8 @@ class CreationFragment : Fragment() {
                     imageSrc = 0
                 )
 
-                val action = CreationFragmentDirections.actionCreationFragmentToDetailsFragment(cocktail)
+                val action =
+                    CreationFragmentDirections.actionCreationFragmentToDetailsFragment(cocktail)
                 findNavController().navigate(action)
 
             } else {

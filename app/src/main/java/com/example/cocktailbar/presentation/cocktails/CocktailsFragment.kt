@@ -1,10 +1,10 @@
 package com.example.cocktailbar.presentation.cocktails
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.cocktailbar.databinding.FragmentCocktailsBinding
 import com.example.cocktailbar.domain.models.Cocktail
@@ -20,11 +20,9 @@ class CocktailsFragment : Fragment() {
     private val viewModel: CocktailsViewModel by viewModel()
     private lateinit var cocktailsAdapter: CocktailsAdapter
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-
         }
     }
 
@@ -50,7 +48,7 @@ class CocktailsFragment : Fragment() {
 
         viewModel.screenState.observe(viewLifecycleOwner) { screenState ->
 
-            when(screenState){
+            when (screenState) {
                 ScreenState.Content -> showContent()
                 ScreenState.Empty -> showEmptyScreen()
                 ScreenState.Error -> showError()
@@ -65,14 +63,16 @@ class CocktailsFragment : Fragment() {
 
     }
 
-
     private fun setRecyclerView() {
 
         cocktailsAdapter =
             CocktailsAdapter(requireContext(), object : CocktailsAdapter.CocktailActionListener {
 
                 override fun onClickItem(cocktail: Cocktail) {
-                    val action  = CocktailsFragmentDirections.actionCocktailsFragmentToDetailsFragment(cocktail)
+                    val action =
+                        CocktailsFragmentDirections.actionCocktailsFragmentToDetailsFragment(
+                            cocktail
+                        )
                     findNavController().navigate(action)
                 }
             })
@@ -81,9 +81,8 @@ class CocktailsFragment : Fragment() {
         binding.recyclerView.setHasFixedSize(true)
     }
 
-
-    private fun showContent(){
-        with(binding){
+    private fun showContent() {
+        with(binding) {
             noContentLayout.visibility = View.GONE
             contentLayout.visibility = View.VISIBLE
             progressBar.visibility = View.GONE
@@ -91,8 +90,8 @@ class CocktailsFragment : Fragment() {
         }
     }
 
-    private fun showLoading(){
-        with(binding){
+    private fun showLoading() {
+        with(binding) {
             noContentLayout.visibility = View.GONE
             contentLayout.visibility = View.GONE
             progressBar.visibility = View.VISIBLE
@@ -100,8 +99,8 @@ class CocktailsFragment : Fragment() {
         }
     }
 
-    private fun showEmptyScreen(){
-        with(binding){
+    private fun showEmptyScreen() {
+        with(binding) {
             noContentLayout.visibility = View.VISIBLE
             contentLayout.visibility = View.GONE
             progressBar.visibility = View.GONE
@@ -109,8 +108,8 @@ class CocktailsFragment : Fragment() {
         }
     }
 
-    private fun showError(){
-        with(binding){
+    private fun showError() {
+        with(binding) {
             noContentLayout.visibility = View.GONE
             contentLayout.visibility = View.GONE
             progressBar.visibility = View.GONE
