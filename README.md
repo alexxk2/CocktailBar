@@ -56,6 +56,7 @@
 
 
 ## Скриншоты основных экранов
+[![Alt text](//placehold.it/300x700)]([http://example.com/](https://github.com/alexxk2/CarsFans/blob/dev/app/src/main/res/drawable/main_screen.gif))
 
 [!(//placehold.it/300x700)](https://github.com/alexxk2/CarsFans/blob/dev/app/src/main/res/drawable/main_screen.gif)
 ![Details screen](https://github.com/alexxk2/CarsFans/blob/dev/app/src/main/res/drawable/detail_screen.gif)
