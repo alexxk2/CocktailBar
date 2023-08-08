@@ -29,6 +29,7 @@
 
     <!--Details screen-->
     <string name="edit">Edit</string>
-    <string name="recipe_string">Recipe:\n %1$s</string>
+    <string name="recipe_string">Recipe:\n %1$s </string>
+    <string name="delete">Delete</string>
 
 </resources>

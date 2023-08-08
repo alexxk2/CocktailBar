@@ -99,10 +99,25 @@
         android:fontFamily="@font/didact_gothic_regular"
         android:gravity="center"
         android:text="@string/edit"
-        android:layout_marginBottom="16dp"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/button_delete"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/button_delete"
+        style="@style/SaveButton"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="@string/add_picture"
+        android:fontFamily="@font/didact_gothic_regular"
+        android:text="@string/delete"
+        android:textSize="24sp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

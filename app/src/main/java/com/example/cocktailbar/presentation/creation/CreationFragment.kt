@@ -23,6 +23,7 @@ class CreationFragment : Fragment() {
     private val binding get() = _binding!!
     private val viewModel: CreationViewModel by viewModel()
     private var cocktailId = -1
+    private lateinit var cocktail: Cocktail
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -130,6 +131,19 @@ class CreationFragment : Fragment() {
                     ingredients = binding.editCocktailIngredients.text.toString(),
                     recipe = binding.editCocktailRecipe.text.toString()
                 )
+
+                cocktail = Cocktail(
+                    id = cocktailId,
+                    name = binding.editCocktailName.text.toString(),
+                    description = binding.editCocktailDescription.text.toString(),
+                    ingredients = binding.editCocktailIngredients.text.toString(),
+                    recipe = binding.editCocktailRecipe.text.toString(),
+                    imageSrc = 0
+                )
+
+                val action = CreationFragmentDirections.actionCreationFragmentToDetailsFragment(cocktail)
+                findNavController().navigate(action)
+
             } else {
                 viewModel.addNewCocktail(
                     name = binding.editCocktailName.text.toString(),
@@ -137,10 +151,10 @@ class CreationFragment : Fragment() {
                     ingredients = binding.editCocktailIngredients.text.toString(),
                     recipe = binding.editCocktailRecipe.text.toString()
                 )
+                val action = CreationFragmentDirections.actionCreationFragmentToCocktailsFragment()
+                findNavController().navigate(action)
             }
 
-            val action = CreationFragmentDirections.actionCreationFragmentToCocktailsFragment()
-            findNavController().navigate(action)
 
         } else {
             showErrorMessage(binding.editCocktailName)
