@@ -57,13 +57,12 @@
 
 ## Gif основных экранов
 
-### Экран “Мои коктейли”. 
-<img src="https://github.com/alexxk2/CarsFans/blob/dev/app/src/main/res/drawable/main_screen.gif" width="340" height="699" /> 
 
-### Экран “Деталка коктейля”. 
-<img src="https://github.com/alexxk2/CarsFans/blob/dev/app/src/main/res/drawable/detail_screen.gif" width="340" height="699" /> 
 
-### Экран “Создание коктейля”. 
+<img src="https://github.com/alexxk2/CarsFans/blob/dev/app/src/main/res/drawable/main_screen.gif" width="340" height="699" />  <br>
+
+<img src="https://github.com/alexxk2/CarsFans/blob/dev/app/src/main/res/drawable/detail_screen.gif" width="340" height="699" /> <br>
+
 <img src="https://github.com/alexxk2/CarsFans/blob/dev/app/src/main/res/drawable/edit_screen.gif" width="340" height="699" />
 
 
