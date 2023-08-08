@@ -27,4 +27,8 @@
     <string name="cancel">Cancel</string>
     <string name="ingredients">Ingredients</string>
 
+    <!--Details screen-->
+    <string name="edit">Edit</string>
+    <string name="recipe_string">Recipe:\n %1$s</string>
+
 </resources>
