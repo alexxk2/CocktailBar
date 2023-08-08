@@ -1,46 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="4dp"
+    android:id="@+id/cocktail_card"
     android:layout_width="160dp"
     android:layout_height="160dp"
+    android:layout_margin="4dp"
     app:cardCornerRadius="54dp"
     app:cardPreventCornerOverlap="false">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <ImageView
-            android:contentDescription="@string/cocktail_image"
+            android:id="@+id/cocktail_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/mohito_image"
+            android:contentDescription="@string/cocktail_image"
             android:scaleType="centerCrop"
-            />
+            android:src="@drawable/mohito_image" />
 
         <TextView
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="100dp"
-            android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:text="@string/default_text"
+            android:id="@+id/cocktail_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/didact_gothic_regular"
-            android:textSize="18sp"
-            android:lines="1"
+            android:layout_marginTop="100dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
             android:ellipsize="end"
+            android:fontFamily="@font/didact_gothic_regular"
+            android:lines="1"
+            android:text="@string/default_text"
             android:textColor="@color/white"
-            />
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 
 </androidx.cardview.widget.CardView>

@@ -12,5 +12,7 @@
     <string name="arrow_down">arrow_down</string>
     <string name="default_text">Some default text</string>
     <string name="cocktail_image">cocktail image</string>
+    <string name="error_image">error image</string>
+    <string name="something_went_wrong">Something went wrong</string>
 
 </resources>
