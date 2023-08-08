@@ -55,10 +55,9 @@
 + Glide
 
 
-## Скриншоты основных экранов
+## Gif основных экранов
 
-<img src="https://github.com/alexxk2/CarsFans/blob/dev/app/src/main/res/drawable/main_screen.gif" width="300" height="700" />
+<img src="https://github.com/alexxk2/CarsFans/blob/dev/app/src/main/res/drawable/main_screen.gif" width="340" height="699" />
+<img src="https://github.com/alexxk2/CarsFans/blob/dev/app/src/main/res/drawable/detail_screen.gif" width="340" height="699" />
+<img src="https://github.com/alexxk2/CarsFans/blob/dev/app/src/main/res/drawable/edit_screen.gif" width="340" height="699" />
 
-![Main screen](https://github.com/alexxk2/CarsFans/blob/dev/app/src/main/res/drawable/main_screen.gif)
-![Details screen](https://github.com/alexxk2/CarsFans/blob/dev/app/src/main/res/drawable/detail_screen.gif)
-![Editing screen](https://github.com/alexxk2/CarsFans/blob/dev/app/src/main/res/drawable/edit_screen.gif)
