@@ -1,5 +1,7 @@
 package com.example.cocktailbar.presentation.creation
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.cocktailbar.domain.models.Cocktail
@@ -13,6 +15,10 @@ class CreationViewModel(
     private val editCocktailUseCase: EditCocktailUseCase,
     private val getCocktailUseCase: GetCocktailUseCase
 ) : ViewModel() {
+
+
+    private val _cocktail = MutableLiveData<Cocktail>()
+    val cocktail: LiveData<Cocktail> = _cocktail
 
 
     private fun insertNewCocktail(cocktail: Cocktail) {
@@ -43,5 +49,37 @@ class CreationViewModel(
         ingredients: String,
     ) = (name.isNotBlank() && ingredients.isNotBlank())
 
+
+    fun getCocktail(id: Int){
+        viewModelScope.launch {
+            _cocktail.value = getCocktailUseCase.execute(id)
+        }
+    }
+
+    private fun updateCocktail(cocktail: Cocktail){
+        viewModelScope.launch {
+            editCocktailUseCase.execute(cocktail)
+        }
+    }
+
+
+    fun editCocktail(
+        id: Int,
+        name: String,
+        description: String,
+        ingredients: String,
+        recipe: String
+    ){
+        val editedCocktail = Cocktail(
+            id = id,
+            name = name,
+            description = description,
+            ingredients = ingredients,
+            imageSrc = 0,
+            recipe = recipe
+        )
+
+        updateCocktail(editedCocktail)
+    }
 
 }

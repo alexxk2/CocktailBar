@@ -72,7 +72,8 @@ class CocktailsFragment : Fragment() {
             CocktailsAdapter(requireContext(), object : CocktailsAdapter.CocktailActionListener {
 
                 override fun onClickItem(cocktail: Cocktail) {
-
+                    val action  = CocktailsFragmentDirections.actionCocktailsFragmentToCreationFragment(cocktail.id)
+                    findNavController().navigate(action)
                 }
             })
 
