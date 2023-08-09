@@ -65,5 +65,7 @@
 
 <img src="https://github.com/alexxk2/CarsFans/blob/dev/app/src/main/res/drawable/edit_screen.gif" width="340" height="699" />
 
+<img src="https://github.com/alexxk2/CarsFans/blob/dev/app/src/main/res/drawable/full_flow.gif" width="340" height="699" />
+
 
 
